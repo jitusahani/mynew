@@ -78,6 +78,70 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;height:66px;
 .c-dot.on{background:#ff6000;transform:scale(1.3)}
 
 /* ===== FEATURES BAR ===== */
+  <!-- ===== PASTE THIS SECTION INTO YOUR index.html AFTER THE FEATURES BAR ===== -->
+
+<!-- MAKHANA BURST ANIMATION SECTION -->
+<section class="makhana-scene" id="burstScene">
+  <!-- Rain makhana balls falling from top -->
+  <div class="rain-mk" style="left:6%;animation-duration:5s;animation-delay:0s;width:18px;height:18px"></div>
+  <div class="rain-mk" style="left:18%;animation-duration:4.2s;animation-delay:1.5s;width:24px;height:24px"></div>
+  <div class="rain-mk" style="left:30%;animation-duration:6s;animation-delay:0.8s;width:16px;height:16px"></div>
+  <div class="rain-mk" style="left:45%;animation-duration:4.8s;animation-delay:2.5s;width:20px;height:20px"></div>
+  <div class="rain-mk" style="left:58%;animation-duration:5.5s;animation-delay:0.3s;width:26px;height:26px"></div>
+  <div class="rain-mk" style="left:70%;animation-duration:4s;animation-delay:3.5s;width:18px;height:18px"></div>
+  <div class="rain-mk" style="left:82%;animation-duration:6.5s;animation-delay:1s;width:22px;height:22px"></div>
+  <div class="rain-mk" style="left:92%;animation-duration:4.5s;animation-delay:2s;width:20px;height:20px"></div>
+  <div class="scene-glow2"></div>
+  <div class="packet-wrap2">
+    <div class="rings-wrap">
+      <div class="rp"></div><div class="rp"></div><div class="rp"></div>
+    </div>
+    <div class="burst-container" id="bc">
+      <div class="bmk"></div><div class="bmk"></div><div class="bmk"></div>
+      <div class="bmk"></div><div class="bmk"></div><div class="bmk"></div>
+      <div class="bmk"></div><div class="bmk"></div><div class="bmk"></div>
+      <div class="bmk"></div><div class="bmk"></div><div class="bmk"></div>
+    </div>
+    <div class="burst-packet" id="burstPacket" onclick="doBurst()" title="Tap me!">
+      <div class="bp-shine"></div>
+      <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="bpg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ff8c00"/><stop offset="45%" stop-color="#ff6000"/><stop offset="100%" stop-color="#b03000"/>
+          </linearGradient>
+          <linearGradient id="btg" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffe600"/><stop offset="100%" stop-color="#ff9500"/>
+          </linearGradient>
+          <filter id="bgl"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+        </defs>
+        <path d="M28 42 Q100 22 172 42 L176 57 Q100 38 24 57Z" fill="url(#btg)"/>
+        <path d="M24 57 Q100 38 176 57 L184 228 Q100 246 16 228Z" fill="url(#bpg)"/>
+        <path d="M24 57 Q100 38 176 57 L184 228 Q100 246 16 228Z" fill="linear-gradient(90deg,rgba(255,255,255,0.15),rgba(255,255,255,0))"/>
+        <path d="M34 82 Q100 70 166 82" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" fill="none"/>
+        <rect x="33" y="97" width="134" height="108" rx="12" fill="rgba(0,0,0,0.12)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <circle cx="100" cy="132" r="30" fill="rgba(255,214,0,0.1)" stroke="rgba(255,214,0,0.35)" stroke-width="1.5"/>
+        <circle cx="100" cy="132" r="22" fill="url(#btg)" filter="url(#bgl)"/>
+        <circle cx="93" cy="126" r="7" fill="rgba(255,255,255,0.3)"/>
+        <text x="100" y="180" text-anchor="middle" font-family="'Baloo 2',cursive" font-size="14.5" font-weight="900" fill="white">MunchJoy</text>
+        <text x="100" y="194" text-anchor="middle" font-family="'Poppins',sans-serif" font-size="7" fill="rgba(255,255,200,0.8)" letter-spacing="1.8">ROASTED MAKHANA</text>
+        <path d="M16 228 Q100 246 184 228 L180 246 Q100 262 20 246Z" fill="url(#btg)"/>
+      </svg>
+      <div class="bp-steam"></div><div class="bp-steam"></div><div class="bp-steam"></div>
+    </div>
+  </div>
+  <div class="burst-text">
+    <div class="bt-tag">&#127807; Pure &amp; Natural</div>
+    <h2 class="bt-title">Packed with <span style="color:#ffd600">Crunch</span>,<br>Bursting with <span style="color:#ff6000;text-shadow:0 0 30px rgba(255,96,0,0.6)">Flavour!</span></h2>
+    <p class="bt-desc">Every pack of MunchJoy is loaded with premium roasted makhana — crispy, light &amp; irresistibly seasoned. Zero guilt. 100% joy.</p>
+    <div class="bt-badges">
+      <div class="bt-badge">&#127807; Gluten Free</div>
+      <div class="bt-badge">&#128170; High Protein</div>
+      <div class="bt-badge">&#10024; Zero Maida</div>
+      <div class="bt-badge">&#128293; Bold Flavours</div>
+    </div>
+    <p class="bt-hint">&#8593; TAP THE PACKET &#8593;</p>
+  </div>
+</section>
 .feat-bar{background:linear-gradient(90deg,#ff6000,#d40000);color:#fff;
   padding:13px 20px;display:flex;justify-content:center;gap:36px;flex-wrap:wrap}
 .feat{display:flex;align-items:center;gap:7px;font-family:'Baloo 2',cursive;font-size:0.9rem;font-weight:600}
