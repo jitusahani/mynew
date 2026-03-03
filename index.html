@@ -513,7 +513,7 @@ var products = [
   {id:5, name:"Raw Makhana",     desc:"Pure, natural makhana — unflavoured & clean",price:200, tag:"Natural",    raw:true,  img:"raw.png"}
 ];
 
-var cart = {};
+var cart = JSON.parse(localStorage.getItem('munchjoy_cart') || '{}');
 
 /* ===== RENDER PRODUCTS ===== */
 function renderProducts() {
@@ -568,6 +568,7 @@ function updateBadge() {
   var t = 0;
   Object.values(cart).forEach(function(i){t+=i.qty;});
   document.getElementById('cartBadge').textContent = t;
+  localStorage.setItem('munchjoy_cart', JSON.stringify(cart));
 }
 
 /* ===== CART ===== */
